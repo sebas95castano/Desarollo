@@ -136,6 +136,14 @@ public class CalculadoraSimple extends javax.swing.JFrame {
 
     private void btn_restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_restaActionPerformed
         // TODO add your handling code here:
+         try{
+           int a = Integer.parseInt(txt_valor1.getText());
+           int b = Integer.parseInt(txt_valor2.getText());
+           int resultado = a - b;
+           txt_resultado.setText(resultado + "");
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(null,"Los valores deben ser numeros: " + e);
+        }
     }//GEN-LAST:event_btn_restaActionPerformed
 
     private void btn_multiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_multiplicacionActionPerformed
