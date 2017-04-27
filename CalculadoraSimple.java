@@ -151,7 +151,16 @@ public class CalculadoraSimple extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_multiplicacionActionPerformed
 
     private void btn_divisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_divisionActionPerformed
-        // TODO add your handling code here:
+        try{
+
+            int a = Integer.parseInt(txt_valor1.getText());
+            int b = Integer.parseInt(txt_valor1.getText());
+            int resultado = a/b;
+            txt_resultado.setText(resultado + "");
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(null, " Los valores deben ser numericos"+ e)
+        }
+
     }//GEN-LAST:event_btn_divisionActionPerformed
 
     /**
